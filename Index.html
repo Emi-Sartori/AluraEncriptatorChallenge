@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://db.onlinewebfonts.com/c/13c63232af298878387142e0da62c96f?family=Fixedsys+Excelsior+3.01" rel="stylesheet">  
+        <title>Encriptador</title>
+    </head>
+    <body class="bodyBackground">
+        <header>
+           <img src="imagenes/Logo.png"  alt="LogoAlura">
+           <h1>WELCOME TO ALURA ENCRIPTATOR CHALLENGE (TM)</h1>
+        </header>
+        <main>
+            <section class="textarea">
+                <textarea id="encryptedText" class="textarea1" placeholder="INSERT TEXT FOR ENCRIPT"></textarea>
+                <img src="imagenes/PipBoyGif.gif" class="PipBoyGif" alt="PipBoyGif">
+                <textarea id="decryptText" class="textarea1" placeholder="ENCRYPTED TEXT"></textarea>
+            </section>
+            <section class="botonera">
+                <button class="boton" onclick="botonReset()">RESET</button>
+                <button class="boton" onclick="botondeCifrado()">ENCRYPT</button> 
+                <button class="boton" onclick="botondeDescifrado()">DECRYPT</button>
+                <button class="boton" onclick="botonCopiar()">COPY</button>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+    <footer>
+        <p class="piePagina">ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM<br>COPYRIGHT 2075-2077 - v.3400 (Especial)<br>PROVIDED FOR ALURA CORPORATION </p>
+    </footer>
+</html>

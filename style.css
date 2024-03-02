@@ -1,0 +1,310 @@
+Body{
+    font-family: "Fixedsys Excelsior 3.01";
+    width: auto;
+    height: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bodyBackground{
+    background-image: url("imagenes/FondoFallout.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-color: #0fB756;
+}
+
+.background {
+    margin: auto;
+    height: auto;
+    display: flex;
+}
+
+header{
+    text-align: center;
+    margin-top: 10em;
+    line-height: 2;
+}
+
+header img{
+    top: 40px;
+    left: 40px;
+    gap: 40px;   
+}
+
+header h1{
+    font-size: 25px;
+    color: #0fb756;
+    font-weight: bold;   
+}
+
+main{
+    line-height: 4;
+}
+
+.textarea{
+    width: auto;
+    height: auto;
+    padding: 1em;    
+    border-color: #0fB756; 
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 4px;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+}
+
+.textarea1{
+    width: auto;
+    height: 15em;
+    padding: 25px 10px 10px 10px;
+    margin:  10px 10px 10px 10px;
+    border-color:   #0fB756; 
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 3px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Fixedsys Excelsior 3.01";
+    color: #146c11;
+    font-size: 25px;
+    background-image: url("imagenes/textAreaBackground.png");
+    background-position: center;   
+}
+
+.textarea1::placeholder{
+    font-family: "Fixedsys Excelsior 3.01";
+    vertical-align: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 25px 10px 10px 10px;
+    font-size: 20px;
+    color: #199515;
+}
+
+.PipBoyGif{
+    width: auto;
+    height: auto;
+    vertical-align: middle;  
+}
+
+.PipBoyGif:hover{
+    filter: opacity(.5);    
+}
+
+.botonera{
+    width: auto;
+    height: max-content;  
+    text-align: center;
+    display: flex;
+}
+
+.boton {
+    width: 70%;
+    height: auto;
+    background-color: #0fB756;
+    padding: 10px 10px 10px 10px;
+    margin:  10px 10px 10px 10px;
+    border-color:   #0fB756; 
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Fixedsys Excelsior 3.01";
+}
+
+.boton:active{
+    background-color: transparent;
+    color: #0fB756;       
+}
+
+.piePagina{
+    width: auto;
+    height: auto;
+    margin-bottom: 15em;
+    font-size: 15px;
+    color: #0fB756;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*media para tablet entre 680px y 1024px*/
+@media screen and (min-width:680px) and (max-width:1024px) {
+    body{
+        background-image: url("imagenes/FondoFallout.jpg");
+        background-repeat: repeat-y;
+        background-position: top center;
+        background-size: cover;
+        display: grid;
+        flex-direction: grid;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    header{
+        margin-top: 5em;
+        line-height: 1;
+    }
+
+    .textarea {
+        border-radius: 0.5em;
+        width: auto;
+        height: auto;
+        padding: 5px 5px 5px 5px;
+        margin:  5px 5px 5px 5px;   
+    }
+
+    .textarea1{
+        width: 25%;
+        height: 10em;
+        padding: 5px 5px 5px 5px;
+        margin:  5px 5px 5px 5px;
+        border-radius: 0.5em;
+        color: #0fB756;
+    }
+    
+    .textarea1::placeholder{
+        width: auto;
+        height: auto;
+        padding: 2em 1px 1px 1px;
+        margin:  1px 1px 1px 1px; 
+        color: #199515;
+    }
+    
+    .PipBoyGif{
+        display:inline-block
+    }
+
+    .botonera {
+        width: auto;
+        height: max-content;  
+        text-align: center;
+        display:flexbox;
+    }       
+}
+
+/*media entre hasta 580px y 680px de ancho*/
+@media screen and (min-width:593px) and (max-width:680px) {
+    body{
+        flex-direction: row;
+        background-repeat: repeat-y;
+    }
+
+    header{
+        margin-top: 5em;
+        line-height: 1;
+    }
+
+    .textarea {
+        background-image: url("imagenes/PipBoyGif.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0.5em;
+        width: auto;
+        height: 20em;
+        vertical-align: bottom;
+        padding: 35px 15px 15px 5px;
+        margin:  15px 5px 5px 5px;   
+    }
+
+    .textarea1{
+        width: auto;
+        height: 10em;
+        padding: 1px 1px 1px 1px;
+        margin:  1px 1px 1px 1px;
+        border-radius: 0.5em; 
+        opacity: 0.9;
+        color: #0fB756;
+    }
+
+    .textarea1::placeholder{
+        width: auto;
+        height: 6em;
+        padding: 2em 1px 1px 1px;
+        margin:  1px 1px 1px 1px; 
+        color: #0fB756;
+    }
+
+    .PipBoyGif{
+        display: none; 
+    }
+   
+    .botonera {
+        width: auto;
+        height: max-content;
+        text-align: center;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        padding: 0em 2em;
+    }       
+}
+
+
+/*media para Celu hasta 580px de ancho*/
+
+@media screen and (max-width:592px) {
+    body{
+        flex-direction: row;
+        background-repeat: repeat-y;
+    }
+
+    header{
+        margin-top: 5em;
+        line-height: 1;
+    }
+
+    .textarea {
+        background-image: url("imagenes/PipBoyGif.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0.5em;
+        width: auto;
+        height: auto;
+        vertical-align: bottom;
+        padding: 15px 15px 15px 5px;
+        margin:  15px 5px 5px 5px;   
+    }
+
+    .textarea1{
+        width: auto;
+        height: 6em;
+        padding: 1px 1px 1px 1px;
+        margin:  1px 1px 1px 1px;
+        border-radius: 0.5em; 
+        opacity: 0.7;
+        color: #0fB756;
+    }
+    
+    .textarea1::placeholder{
+        width: auto;
+        height: 6em;
+        padding: 2em 1px 1px 1px;
+        margin:  1px 1px 1px 1px; 
+        color: #0fB756;
+    }
+
+    .PipBoyGif{
+       display: none; 
+    }
+       
+    .botonera {
+        width: auto;
+        height: max-content;
+        text-align: center;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        padding: 0em 2em;
+    }       
+}
+
+
