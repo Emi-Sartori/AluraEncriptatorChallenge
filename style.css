@@ -74,7 +74,9 @@ main{
     color: #146c11;
     font-size: 25px;
     background-image: url("imagenes/textAreaBackground.png");
-    background-position: center;   
+    background-position: center;
+    text-transform: lowercase;
+
 }
 
 .textarea1::placeholder{

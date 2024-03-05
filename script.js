@@ -9,6 +9,18 @@ const matrizdeCifrado = [
     ["u","ufat"],
 ]
 
+campoaEncriptar.addEventListener("keyup", (event) => {
+   const caracter = event.key;
+   const regex = /[^\w\s]/; // Coincide con caracteres especiales
+
+    if (regex.test(caracter)) {
+    event.preventDefault();
+    console.log(`Se elimino un caracter no admitido: ${caracter}`);
+    campoaEncriptar.value = campoaEncriptar.value.slice(0,-1);
+    }
+});
+
+ 
 function botondeCifrado( ) {
     const textoCifrado = funciondeCifrado(campoaEncriptar.value);
     campoResultado.value = textoCifrado;
@@ -50,6 +62,7 @@ function botonReset(){
 
 function botonCopiar(){
     const textoCopiado = document.getElementById("decryptText").value;
+    navigator.clipboard.writeText(textoCopiado);
     document.getElementById("encryptedText").value = textoCopiado;
     campoResultado.value='';
 }
