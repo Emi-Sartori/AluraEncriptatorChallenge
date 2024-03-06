@@ -11,7 +11,7 @@ const matrizdeCifrado = [
 
 campoaEncriptar.addEventListener("keyup", (event) => {
    const caracter = event.key;
-   const regex = /[^\w\s]/; // Coincide con caracteres especiales
+   const regex = /[\u00C0-\u00FF/g][^\w\s]/; // Coincide con caracteres especiales
 
     if (regex.test(caracter)) {
     event.preventDefault();
