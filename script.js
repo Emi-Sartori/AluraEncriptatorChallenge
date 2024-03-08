@@ -1,7 +1,7 @@
 const campoaEncriptar = document.querySelector("#encryptedText");
 const campoResultado = document.querySelector("#decryptText");
 
-const matrizdeCifrado = [
+var matrizdeCifrado = [
     ["e","enter"],
     ["i","imes"],
     ["a","ai"],
@@ -9,9 +9,10 @@ const matrizdeCifrado = [
     ["u","ufat"],
 ]
 
+
 campoaEncriptar.addEventListener("keyup", (event) => {
    const caracter = event.key;
-   const regex = /[\u00C0-\u00FF/g][^\w\s]/; // Coincide con caracteres especiales
+   const regex = /[^\w\s]/; // Coincide con caracteres especiales
 
     if (regex.test(caracter)) {
     event.preventDefault();
@@ -41,6 +42,7 @@ function funciondeCifrado(textoaCifrar){
 function botondeDescifrado( ) {
     const textoCifrado = funciondeDescifrado(campoaEncriptar.value);
     campoResultado.value = textoCifrado;
+    campoaEncriptar.value=" ";
 }
 
 function funciondeDescifrado(textoaCifrar){
@@ -49,7 +51,7 @@ function funciondeDescifrado(textoaCifrar){
             textoaCifrar = textoaCifrar.replaceAll(
                 matrizdeCifrado[i][1],
                 matrizdeCifrado[i][0]
-            )            
+            )
         }
     }
     return textoaCifrar;
@@ -61,8 +63,8 @@ function botonReset(){
 }
 
 function botonCopiar(){
-    const textoCopiado = document.getElementById("decryptText").value;
-    navigator.clipboard.writeText(textoCopiado);
-    document.getElementById("encryptedText").value = textoCopiado;
-    campoResultado.value='';
+     const textoCopiado = document.getElementById("decryptText").value;
+     navigator.clipboard.writeText(textoCopiado);
+     document.getElementById("encryptedText").value = textoCopiado;
+     campoResultado.value='';
 }
