@@ -1,18 +1,11 @@
 const campoaEncriptar = document.querySelector("#encryptedText");
 const campoResultado = document.querySelector("#decryptText");
 
-var matrizdeCifrado = [
-    ["e","enter"],
-    ["i","imes"],
-    ["a","ai"],
-    ["o","ober"],
-    ["u","ufat"],
-]
 
 
 campoaEncriptar.addEventListener("keyup", (event) => {
-   const caracter = event.key;
-   const regex = /[^\w\s]/; // Coincide con caracteres especiales
+   let caracter = event.key;
+   let regex = /[^\w\s]/; // Coincide con caracteres especiales
 
     if (regex.test(caracter)) {
     event.preventDefault();
@@ -21,14 +14,15 @@ campoaEncriptar.addEventListener("keyup", (event) => {
     }
 });
 
- 
+
 function botondeCifrado( ) {
-    const textoCifrado = funciondeCifrado(campoaEncriptar.value);
+    let textoCifrado = funciondeCifrado(campoaEncriptar.value);
     campoResultado.value = textoCifrado;
 }
 
 function funciondeCifrado(textoaCifrar){
-    for(let i = 0; i < matrizdeCifrado.length; i++) {
+    let matrizdeCifrado = [["e","enter"],["a","ai"],["o","ober"],["u","ufat"],["i","imes"]];
+    for(let i = 0; i < matrizdeCifrado.length; i) {
         if(textoaCifrar.includes(matrizdeCifrado[i][0])){
             textoaCifrar = textoaCifrar.replaceAll(
                 matrizdeCifrado[i][0],
@@ -40,12 +34,13 @@ function funciondeCifrado(textoaCifrar){
 }
 
 function botondeDescifrado( ) {
-    const textoCifrado = funciondeDescifrado(campoaEncriptar.value);
+    let textoCifrado = funciondeDescifrado(campoaEncriptar.value);
     campoResultado.value = textoCifrado;
     campoaEncriptar.value=" ";
 }
 
 function funciondeDescifrado(textoaCifrar){
+    let matrizdeCifrado = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
     for(let i = 0; i < matrizdeCifrado.length; i++) {
         if(textoaCifrar.includes(matrizdeCifrado[i][1])){
             textoaCifrar = textoaCifrar.replaceAll(
@@ -63,7 +58,7 @@ function botonReset(){
 }
 
 function botonCopiar(){
-     const textoCopiado = document.getElementById("decryptText").value;
+     let textoCopiado = document.getElementById("decryptText").value;
      navigator.clipboard.writeText(textoCopiado);
      document.getElementById("encryptedText").value = textoCopiado;
      campoResultado.value='';
